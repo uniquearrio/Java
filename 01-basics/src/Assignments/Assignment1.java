@@ -7,20 +7,27 @@ public class Assignment1 {
 		Scanner sc= new Scanner(System.in);
 		System.out.println("How many number you want to type: ");
 		int numcount = sc.nextInt();
-		
-		
-		int[] myNum = {};
-		for (int j = 0; j <= numcount;j++) {
+		int i = 0;
+		var even = 0;
+		var odd= 0;
+		var zero = 0;
+		while(i<numcount) {
+			System.out.println("Enter any number: ");
+			int num = sc.nextInt();
 			
-			System.out.print("Enter any number: ");
-			int i = sc.nextInt();
-			myNum.add();
-			
-			
-			sc.nextLine();
+			if(num>0) {
+				even=even+1;
+			}else if(num<0){
+				odd=odd+1;
+			}else {
+				zero=zero+1;
+			}
+			i++;
 		}
 		
-		
+		System.out.println("Number of even:" + even);
+		System.out.println("Number of odd:" + odd);
+		System.out.println("Number of zero:" + zero);
 		sc.close();
 	}
 }
