@@ -19,9 +19,9 @@ public class DateTime_part1 {
 		
 		List<String> list = Arrays.asList(WeekFields);
 		if (list.contains(tmp)) {
-			System.out.println("today is weekday");
+			System.out.println("today is weekday.I have no time.I am studying programming Language");
 		}else {
-			System.out.println("today is weekend");
+			System.out.println("today is weekend.");
 		}
 	}
 }
