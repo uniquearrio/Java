@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <Pane layoutX="26.0" layoutY="14.0" prefHeight="66.0" prefWidth="447.0" style="-fx-background-color: blue;">
+         <children>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="16.0" prefHeight="22.0" prefWidth="295.0" text="Register Form" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label alignment="CENTER_RIGHT" layoutX="126.0" layoutY="132.0" text="Email" />
+      <TextField fx:id="txt_Email" layoutX="200.0" layoutY="127.0" promptText="Enter email" />
+      <Label alignment="CENTER_RIGHT" layoutX="125.0" layoutY="174.0" text="Password" />
+      <Label alignment="CENTER_RIGHT" layoutX="126.0" layoutY="216.0" text="City" />
+      <PasswordField fx:id="txt_Password" layoutX="201.0" layoutY="169.0" promptText="enter text" />
+      <ComboBox fx:id="cbo_City" layoutX="201.0" layoutY="211.0" prefHeight="32.0" prefWidth="179.0" promptText="Choose City" />
+      <Label alignment="CENTER_RIGHT" layoutX="125.0" layoutY="258.0" text="Birthday" />
+      <DatePicker fx:id="txt_Birthday" layoutX="200.0" layoutY="253.0" prefHeight="32.0" prefWidth="179.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="125.0" layoutY="300.0" text="Genter" />
+      <RadioButton layoutX="201.0" layoutY="300.0" mnemonicParsing="false" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genter_gp" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="273.0" layoutY="300.0" mnemonicParsing="false" text="Female" toggleGroup="$genter_gp" />
+      <Label alignment="CENTER_RIGHT" layoutX="127.0" layoutY="343.0" text="Others" />
+      <TextArea fx:id="txt_Others" layoutX="209.0" layoutY="343.0" prefHeight="86.0" prefWidth="200.0" promptText="Additional Defination" />
+      <Label alignment="CENTER_RIGHT" layoutX="125.0" layoutY="448.0" text="Skillstes" />
+      <CheckBox fx:id="chk_Java" layoutX="203.0" layoutY="448.0" mnemonicParsing="false" text="Java" />
+      <CheckBox fx:id="chk_Php" layoutX="273.0" layoutY="448.0" mnemonicParsing="false" text="PHP" />
+      <CheckBox fx:id="chk_Javascript" layoutX="335.0" layoutY="448.0" mnemonicParsing="false" text="Javascript" />
+      <Button fx:id="btn_Register_click" layoutX="203.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn_Register_click" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: green;" text="Register" textFill="#e3e70e">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="txt_Clear_click" layoutX="344.0" layoutY="497.0" mnemonicParsing="false" onAction="#txt_Clear_click" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: red;" text="Restart" textFill="#e3e70e">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="28.0" layoutY="542.0" text="If you already have an account" />
+      <Label layoutX="230.0" layoutY="542.0" onMouseClicked="#lblLogin_click" text="Log in" textFill="#1900ff" />
+   </children>
+</AnchorPane>
